@@ -42,7 +42,7 @@ public class Pattern {
     }
     public static void pattern5(int n){
         for (int i=1;i<=2*n;i++){
-            int colinrow = i>n?2*n-i-1:i;
+            int colinrow = i>n?2*n-i:i;
             for (int j=1;j<=colinrow;j++){
                 System.out.print("* ");
             }
