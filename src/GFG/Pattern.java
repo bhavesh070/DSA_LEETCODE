@@ -78,5 +78,6 @@ public class Pattern {
             }
             System.out.println();
         }
+        System.out.println("THIS IS AMAZING");
     }
 }
