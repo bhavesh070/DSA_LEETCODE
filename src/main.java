@@ -58,6 +58,7 @@ public class main {
         System.out.println("Selected Activities:");
         for (int[] activity : result) {
             System.out.println(activity[0] + " " + activity[1]);
+            System.out.println("bhavhesh");
         }
     }
 }
