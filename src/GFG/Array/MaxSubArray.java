@@ -2,8 +2,9 @@ package PACKAGE_NAME.GFG.Array;
 
 public class MaxSubArray {
     public static void main(String[] args) {
-        int arr[] = {2,3,-8,7,-1,2,3};
+        int arr[] = {1};
         System.out.println(max(arr));
+        System.out.println(Max(arr));
     }
     public static int max(int[] arr){
         int MaxValue = arr[0];
@@ -15,5 +16,14 @@ public class MaxSubArray {
             }
         }
         return MaxValue;
+    }
+    public static int Max(int[] arr){
+        int MaxValue = arr[0];
+        int res = arr[0];
+        for (int i=1;i<arr.length;i++){
+            MaxValue = Math.max(MaxValue+arr[i],arr[i]);
+            res = Math.max(res,MaxValue);
+        }
+        return res;
     }
 }
