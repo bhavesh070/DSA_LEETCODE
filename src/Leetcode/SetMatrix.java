@@ -8,7 +8,7 @@ public class SetMatrix {
               {1,1,1}
       };
 
-      setZeroes(arr);
+      SetZeros(arr);
       printArray(arr);
     }
     public static void setZeroes(int[][] matrix) {
@@ -56,5 +56,27 @@ public class SetMatrix {
             System.out.println();
         }
 
+    }
+    public static void SetZeros(int[][] matrix){
+        int row = matrix.length;
+        int col = matrix[0].length;
+        int[][] matrix2 = new int[row][col];
+        for (int i=0;i<row;i++){
+            for (int j=0;j<col;j++){
+                matrix[i][j] = matrix2[i][j];
+            }
+        }
+        for (int i=0;i<row;i++){
+            for (int j=0;j<col;j++){
+                if (matrix2[i][j]==0){
+                    for (int k=0;k<row;k++){
+                        matrix2[i][k] = 0;
+                    }
+                    for (int k=0;k<col;k++){
+                        matrix2[col][j] = 0;
+                    }
+                }
+            }
+        }
     }
 }
