@@ -2,18 +2,21 @@ package PACKAGE_NAME.Leetcode;
 
 public class ReverseArray {
     public static void main(String[] args) {
-        int[] arr ={1,2,3,4,5,6};
-        Reverse(arr);
+        int[] arr ={1,2,3,4,5};
+        reverse(arr);
         printArray(arr);
 
     }
-    public static int[] Reverse(int[] arr){
-        int n= arr.length;
-        for (int i=0;i<n/2||i<n/2+1;i++){
-          swap(arr,i,n-1-i);
+    public static int[] reverse(int[] arr) {
+        int i =0,j=arr.length-1;
+        while (i<=j){
+            swap(arr,i,j);
+            i++;
+            j--;
         }
         return arr;
     }
+
     public static void printArray(int[] arr){
         for (int val:arr){
             System.out.print(val+" ");
