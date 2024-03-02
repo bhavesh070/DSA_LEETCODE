@@ -1,46 +1,55 @@
 package PACKAGE_NAME.GFG.LinkedList;
 
-public class OddEvenLinkedList {
-    public static void main(String[] args) {
-        // Your main method implementation
-    }
 
-    public ListNode oddEvenList(ListNode head) {
-        if (head == null || head.next == null) {
+import java.util.Scanner;
+class ListNode{
+    int data;
+    ListNode next;
+
+    ListNode(int data){
+        this.data = data;
+        this.next = null;
+    }
+}
+public class OddEvenLinkedList {
+    ListNode head;
+    ListNode current;
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+    }
+    public ListNode oddeven(ListNode head){
+        if (head==null &&head.next==null){
             return head;
         }
-
         ListNode oddHead = new ListNode(-1);
         ListNode evenHead = new ListNode(-1);
-        ListNode oddTail = oddHead;
         ListNode evenTail = evenHead;
+        ListNode oddTail = oddHead;
         int index = 1;
         ListNode current = head;
-
-        while (current != null) {
-            if (index % 2 == 0) {
+        while(current!=null){
+            if (index%2==0){      /// ADD DATA Instead index here
                 evenTail.next = current;
                 evenTail = evenTail.next;
-            } else {
+            }else{
                 oddTail.next = current;
                 oddTail = oddTail.next;
             }
             current = current.next;
             index++;
         }
-
-        oddTail.next = evenHead.next;
+        if (oddHead!=oddTail){
+            oddTail.next =evenHead.next;
+        }
         evenTail.next = null;
 
         return oddHead.next;
     }
 
-    class ListNode {
-        int data;
-        ListNode next;  // Fix: Change 'int next' to 'ListNode next'
+    public void push(int data){
+        ListNode list = new ListNode(data);
+        if (head == null){
 
-        ListNode(int data) {
-            this.data = data;
         }
     }
 }
