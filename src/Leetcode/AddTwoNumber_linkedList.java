@@ -1,5 +1,7 @@
 package PACKAGE_NAME.Leetcode;
 
+import java.util.Scanner;
+
 class ListNode {
     int val;
     ListNode next;
@@ -8,23 +10,19 @@ class ListNode {
         this.val = val;
     }
 
-    ListNode(ListNode next) {
+    ListNode() {
         this.next = next;
     }
 }
 
 public class AddTwoNumber_linkedList {
     public static void main(String[] args) {
-        // Create linked lists l1 and l2
-        ListNode l1 = new ListNode(2);
-        l1.next = new ListNode(4);
-        l1.next.next = new ListNode(3);
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
 
-        ListNode l2 = new ListNode(5);
-        l2.next = new ListNode(6);
-        l2.next.next = new ListNode(4);
+        ListNode l1 = createLinkedList(sc,n);
+        ListNode l2 = createLinkedList(sc,n);
 
-        // Call addTwoNumber method and print the result
         ListNode result = addTwoNumbers(l1, l2);
         while (result != null) {
             System.out.print(result.val + " ");
@@ -52,6 +50,16 @@ public class AddTwoNumber_linkedList {
         }
         if (carry > 0) {
             current.next = new ListNode(carry);
+        }
+        return dummy.next;
+    }
+    public static ListNode createLinkedList(Scanner sc, int n){
+        ListNode dummy = new ListNode();
+        ListNode current = dummy;
+        for (int i=0;i<n;i++){
+            int val = sc.nextInt();
+            current.next = new ListNode(val);
+            current = current.next;
         }
         return dummy.next;
     }
