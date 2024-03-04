@@ -27,6 +27,7 @@ public class AddTwoNumber_linkedList {
         while (result != null) {
             System.out.print(result.val + " ");
             result = result.next;
+            return;
         }
     }
 
