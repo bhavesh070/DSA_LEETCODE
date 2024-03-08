@@ -12,6 +12,6 @@ public class GetMinStack {
 
     }
     public void psuh(int val){
-        this.val = val;
+        return;
     }
 }
