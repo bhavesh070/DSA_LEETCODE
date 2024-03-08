@@ -11,6 +11,8 @@ public class Array_Deque {
         System.out.println(s.peek());
         System.out.println(s.pop());
         System.out.println(s.peek());
+        System.out.println(s.size());
+        System.out.println(s.isEmpty());
 
     }
 }
