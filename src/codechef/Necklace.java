@@ -21,8 +21,8 @@ public class Necklace {
             while (!temp.isEmpty()){
                 stk.push(temp.pop());
             }
-            while (!stk.isEmpty()){
-                System.out.print(stk.pop()+" ");
+            for (int i = 0; i < k; i++) {
+                System.out.print(stk.get(i) + " ");
             }
             System.out.println();
         }
