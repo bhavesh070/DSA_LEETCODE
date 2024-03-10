@@ -5,37 +5,32 @@ import java.util.ArrayList;
 import java.util.ArrayList;
 
 class mystack {
-    ArrayList<Integer> el = new ArrayList<>();
+    ArrayList<Integer> stk = new ArrayList<>();
 
-    public void push(int val) {
-        el.add(val);
+    public mystack(){
+
     }
-
-    public int peek() {
-        if (isEmpty()) {
-            throw new IllegalStateException("Stack is empty");
-        }
-        return el.get(el.size() - 1);
+    public void push(int val){
+        stk.add(val);
     }
-
-    public int pop() {
-        if (isEmpty()) {
-            throw new IllegalStateException("Stack is empty");
+    public int peek(){
+       return (stk.size()-1);
+    }
+    public int pop(){
+        if(stk.isEmpty()){
+            return -1;
         }
-        int res = el.get(el.size() - 1);
-        el.remove(el.size() - 1);
+        int res = stk.get(stk.size()-1);
+        stk.remove(stk.size()-1);
         return res;
     }
-
-    public int size() {
-        return el.size();
+    public int size(){
+        return stk.size();
     }
-
-    public boolean isEmpty() {
-        return el.isEmpty();
+    public boolean isEmpty(){
+        return stk.isEmpty();
     }
 }
-
 public class STACK_ArrayList {
     public static void main(String[] args) {
         mystack s = new mystack();
