@@ -2,7 +2,7 @@ package PACKAGE_NAME.Pattern;
 
 public class Asiignments {
     public static void main(String[] args) {
-        pat1(5);
+//        pat1(5);
 //        pat2(5);
 //        pat3(5);
 //        pat4(5);
@@ -10,8 +10,10 @@ public class Asiignments {
 //        pat6(5);
 //        pat7(5);
 //        pat8(5);
-        pat9(5);
-        pat10(5);
+//        pat9(5);
+//        pat10(5);
+//        pat11(5);
+        pat13(5);
     }
     static void pat1(int n){
         for (int i=0;i<n;i++){
@@ -117,6 +119,53 @@ public class Asiignments {
             }
             for (int j=0;j<i+1;j++){
                 System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+    static void pat11(int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j < n - i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+    static void pat12(int n){
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j < n - i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+        for (int i=0;i<n;i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j < i + 1; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+    static void pat13(int n) {
+        for (int i = 0; i < n; i++) {
+            //for spaces
+            for (int j=0;j<n-i-i;j++){
+                System.out.print(" ");
+            }
+            for (int j=0;j<n;j++){
+                if ((i==4)||(i+j==4)||(j-i==4)){
+                    System.out.print("*");
+                }else {
+                    System.out.print(" ");
+                }
             }
             System.out.println();
         }
