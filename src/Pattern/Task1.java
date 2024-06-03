@@ -2,8 +2,8 @@ package PACKAGE_NAME.Pattern;
 
 public class Task1 {
     public static void main(String[] args) {
-        pattern1(4);
-        pater1(5);
+
+        pattern(4);
     }
 
     public static void pattern1(int n){
@@ -22,5 +22,13 @@ public class Task1 {
             System.out.println();
         }
 
+    }
+    public static void pattern(int n){
+        for (int i=0;i<n;i++){
+            for (int j=0;j<i;j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
     }
 }
