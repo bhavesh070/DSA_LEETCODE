@@ -7,8 +7,9 @@ public class Asiignments {
         pat3(5);
         pat4(5);
         pat5(5);
-        //pat6(5);
+        pat6(5);
         pat7(5);
+        pat8(5);
     }
     static void pat1(int n){
         for (int i=0;i<n;i++){
@@ -78,6 +79,18 @@ public class Asiignments {
             }
             //for stars
             for (int j=0;j<n-i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+    static void pat8(int n){
+        for (int i=0;i<n;i++){
+            //for space
+            for (int j=0;j<n-i-1;j++){
+                System.out.print(" ");
+            }
+            for (int j=0;j<i*2+1;j++){
                 System.out.print("*");
             }
             System.out.println();
