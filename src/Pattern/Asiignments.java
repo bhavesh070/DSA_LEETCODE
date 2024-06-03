@@ -3,13 +3,15 @@ package PACKAGE_NAME.Pattern;
 public class Asiignments {
     public static void main(String[] args) {
         pat1(5);
-        pat2(5);
-        pat3(5);
-        pat4(5);
-        pat5(5);
-        pat6(5);
-        pat7(5);
-        pat8(5);
+//        pat2(5);
+//        pat3(5);
+//        pat4(5);
+//        pat5(5);
+//        pat6(5);
+//        pat7(5);
+//        pat8(5);
+        pat9(5);
+        pat10(5);
     }
     static void pat1(int n){
         for (int i=0;i<n;i++){
@@ -92,6 +94,29 @@ public class Asiignments {
             }
             for (int j=0;j<i*2+1;j++){
                 System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+    static void pat9(int n){
+        for (int i=0;i<n;i++){
+            //for spaces
+            for (int j=0;j<i;j++){
+                System.out.print(" ");
+            }
+            for (int j=0;j<2*(n-i)-1;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+    static void pat10(int n){
+        for (int i=0;i<n;i++){
+            for (int j=0;j<n-i-1;j++){
+                System.out.print(" ");
+            }
+            for (int j=0;j<i+1;j++){
+                System.out.print("* ");
             }
             System.out.println();
         }
