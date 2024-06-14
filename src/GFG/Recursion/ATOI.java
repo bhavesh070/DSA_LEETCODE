@@ -39,4 +39,5 @@ public class ATOI {
        }
        return num*sign;
     }
+
 }
