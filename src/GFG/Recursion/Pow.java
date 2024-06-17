@@ -4,6 +4,7 @@ public class Pow {
     public static void main(String[] args) {
         System.out.println(mypow(2,-2));
         System.out.println(myPOW(2,-2));
+        System.out.println(myPow(2,-2));
     }
     public static double mypow(double x , int n){   // brute force approach
         if(n == 0){
@@ -38,6 +39,20 @@ public class Pow {
             return 1/ans;
         }
         return ans;
-
+    }
+    public static double  myPow(double x , int n){
+        if (n==0){
+            return 1;
+        }
+        double temp = myPow(x,n/2);
+        if (n%2==0){
+            return  (temp*temp);
+        }else {
+            if (n>0){
+                return (temp*temp*x);
+            }else {
+                return  (temp*temp*1/x);
+            }
+        }
     }
 }
