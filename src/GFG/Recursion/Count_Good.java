@@ -16,4 +16,25 @@ public class Count_Good {
         }
         return  (int) ans;
     }
+    public int countGoodNumbers(long n) {
+        int mod = 1000000007;
+        long a = n/2 + n%2;
+        long b = n/2;
+        return (int) ((myPow(5,a,mod)*myPow(4,b,mod))%mod);
+    }
+    public long myPow(long x, long n, int mod){
+        if(n==0){
+            return 1;
+        }
+        long temp = myPow(x,n/2,mod);
+        if(n%2==0){
+            return (temp*temp)%mod;
+        }else{
+            if(n>0){
+                return (temp*temp*x)%mod;
+            }else{
+                return (temp*temp*1/x)%mod;
+            }
+        }
+    }
 }
