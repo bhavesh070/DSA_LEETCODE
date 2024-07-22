@@ -29,7 +29,7 @@ public class Count_Good {
             return 1;
         }
         long temp = myPow(x,n/2,mod);
-        int tempo = 5;
+        
         if(n%2==0){
             return (temp*temp)%mod;
         }else{
